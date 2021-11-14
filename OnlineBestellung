@@ -1,0 +1,26 @@
+public abstract class OnlineBestellung {
+	
+	String produktname;
+	double nettopreis;
+	
+	//Konstruktor
+	OnlineBestellung(String produktname, double nettopreis){
+		this.produktname = produktname;
+		this.nettopreis = nettopreis;
+		
+	}
+	
+	//abstrakte Methode
+	public abstract double lieferkosten();
+	
+	//konkrete Methode
+	private double bruttopreis(double nettopreis) {
+		return (this.nettopreis * 1.07);
+
+	}
+	
+	public double getBruttopreis() {
+		return (this.nettopreis * 1.07);
+	}
+
+}
