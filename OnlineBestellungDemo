@@ -1,0 +1,28 @@
+//Hauptprogramm
+public class OnlineBestellungDemo {
+
+	public static void main(String[] args) {
+	
+		//Instanzen
+		Schuhe shoe1 = new Schuhe("sneakers", 97.30, 42, "schwarz", "DHL");
+		Schuhe shoe2 = new Schuhe("flipflops", 23.20, 39, "weiss", "UPS");
+		
+		//Methodenaufruf abstrakter Klasse
+		System.out.println("Bruttopreis 1: " + shoe1.getBruttopreis());
+		System.out.println("Bruttopreis 2: " + shoe2.getBruttopreis());
+		
+		//Methodenaufruf abstrakter Klasse
+		System.out.println("Lieferkosten 1: " + shoe1.lieferkosten());
+		System.out.println("Lieferkosten 2: " + shoe2.lieferkosten()); 
+		
+		//Methodenaufruf konkreter Klasse
+		System.out.println("Summe 1: " + shoe1.summe());
+		System.out.println("Summe 2: " + shoe2.summe());
+		
+		//Methodenaufruf konkreter Klasse
+		System.out.println("Zusteller 1: " + shoe1.getZusteller());
+		System.out.println("Zusteller 2: " + shoe2.getZusteller());
+
+	}
+
+}
