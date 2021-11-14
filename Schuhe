@@ -1,0 +1,36 @@
+public class Schuhe extends OnlineBestellung {
+	
+	private int groesse;
+	private String farbe;
+	private String zusteller;
+	
+	Schuhe(String produktname, double nettopreis, int groesse, String farbe, String zusteller){
+		super(produktname, nettopreis);
+		this.groesse = groesse;
+		this.farbe = farbe;
+		this.zusteller = zusteller;
+	}
+	
+	public double lieferkosten() {
+		if(getBruttopreis()>=30) {
+			return 0;
+		}
+		else {
+			return (getBruttopreis() * 0.05);
+		}		
+	}
+	
+	public double summe() {
+		return getBruttopreis() + lieferkosten();
+	}
+
+	public String getZusteller() {
+		return this.zusteller;
+	}
+	
+	public String getFarbe() {
+		return farbe;
+	}
+	
+	
+}
